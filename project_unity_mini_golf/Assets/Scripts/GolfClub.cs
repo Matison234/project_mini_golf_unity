@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityAtoms.Mobile;
+using UnityAtoms.BaseAtoms;
 
 public class GolfClub : MonoBehaviour
 {
-    public float hitPower;
+    public FloatReference hitPower;
     public Rigidbody2D ballRb2D;
     
     
