@@ -28,8 +28,8 @@ public class DragVisualizer : MonoBehaviour
             
             points[0].x = tui.InputWorldPosLastDown.x;
             points[0].y = tui.InputWorldPosLastDown.y;
-            points[1].x = tui.InputPos.x;
-            points[1].y = tui.InputPos.y;
+            points[1].x = tui.InputWorldPos.x;
+            points[1].y = tui.InputWorldPos.y;
 
             linerenderer.SetPositions(points);
             linerenderer.enabled = true;
@@ -38,8 +38,8 @@ public class DragVisualizer : MonoBehaviour
         {
             points[0].x = tui.InputWorldPosLastDown.x;
             points[0].y = tui.InputWorldPosLastDown.y;
-            points[1].x = tui.InputPos.x;
-            points[1].y = tui.InputPos.y;
+            points[1].x = tui.InputWorldPos.x;
+            points[1].y = tui.InputWorldPos.y;
 
             linerenderer.SetPositions(points);
         }

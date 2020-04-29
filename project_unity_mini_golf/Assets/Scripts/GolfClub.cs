@@ -8,6 +8,7 @@ public class GolfClub : MonoBehaviour
 {
     public FloatReference hitPower;
     public Rigidbody2D ballRb2D;
+    public Vector2Variable hitValue;
     
     
     void Start()
@@ -25,7 +26,8 @@ public class GolfClub : MonoBehaviour
         if(tui.InputState == TouchUserInput.State.Up)
         {
             Vector2 hitVector = tui.InputPos - tui.InputPosLastDown;
-            ballRb2D.AddForce(hitPower * hitVector);
+            hitValue.Value = hitPower * hitVector;
+            ballRb2D.AddForce(hitValue.Value);
 
         }
        

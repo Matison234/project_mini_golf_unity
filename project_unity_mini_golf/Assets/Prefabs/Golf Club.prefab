@@ -86,3 +86,4 @@ MonoBehaviour:
     _variable: {fileID: 11400000, guid: 4d59a5d24933b824186d98585bd4ffaf, type: 2}
     _variableInstancer: {fileID: 0}
   ballRb2D: {fileID: 0}
+  hitValue: {fileID: 11400000, guid: a9382b40923ba5142aadab93f80c3b99, type: 2}
