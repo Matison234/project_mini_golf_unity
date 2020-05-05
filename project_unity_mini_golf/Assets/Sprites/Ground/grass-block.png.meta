@@ -29,8 +29,11 @@ TextureImporter:
   - first:
       213: -4266439812524273506
     second: grass-block-bottom-right
+  - first:
+      213: 6279887987997099761
+    second: grass-block_0
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -84,6 +87,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -180,7 +184,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 193
+        y: 192
         width: 128
         height: 128
       alignment: 0
@@ -297,6 +301,27 @@ TextureImporter:
       bones: []
       spriteID: d0e844c5d81217e42a0bbf24ab55c118
       internalID: -4266439812524273506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass-block_0
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 343
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f64fc15ad4a62750800000000000000
+      internalID: 6279887987997099761
       vertices: []
       indices: 
       edges: []
