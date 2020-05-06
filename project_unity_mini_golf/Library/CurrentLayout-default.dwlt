@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -240,8 +240,8 @@ MonoBehaviour:
     y: 0
     width: 311
     height: 947
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.808394, y: 0.5762001, z: -26.425781}
+    m_Target: {x: -2.8465655, y: 0.6010571, z: -31.030273}
     speed: 2
-    m_Value: {x: -1.808394, y: 0.5762001, z: -26.425781}
+    m_Value: {x: -2.8465655, y: 0.6010571, z: -31.030273}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -478,9 +478,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.66859
+    m_Target: 5.7804623
     speed: 2
-    m_Value: 5.66859
+    m_Value: 5.7804623
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -627,9 +627,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e6f9ffff
-      m_LastClickedID: -1562
-      m_ExpandedIDs: 6cfbffff
+      m_SelectedIDs: e0530000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 60b8ffff98b8ffffd8b8ffff0eb9ffff4ab9ffffa2baffff96c3ffff32c6ffff62c7ffff86cbffff62d0ffffcedeffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -692,20 +692,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Ground
+    - Assets/Scenes
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Sprites/Ground
-  m_LastFoldersGridSize: -1
+  - Assets/Scenes
+  m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\milus\OneDrive\Documents\Repos\Minigolf\project_mini_golf_unity\project_unity_mini_golf
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f23b0000
-    m_LastClickedID: 15346
-    m_ExpandedIDs: 00000000e03b0000f03b000000ca9a3b
+    m_SelectedIDs: 7e500000
+    m_LastClickedID: 20606
+    m_ExpandedIDs: 000000007650000082500000bc540000c254000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -733,7 +733,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e03b0000
+    m_ExpandedIDs: 0000000076500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 503100005a3100005c3100002836000042450000283300003e3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -786,7 +786,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 50
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 112
 --- !u!114 &19
