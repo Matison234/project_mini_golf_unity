@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityAtoms.BaseAtoms;
+using UnityAtoms.Mobile;
 
 public class TrajectoryPrediction : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class TrajectoryPrediction : MonoBehaviour
 
     [SerializeField] private float predictionTime = 2.0f;
 
+    private bool isPredicting = false;
+
     [SerializeField] private LineRenderer lineRenderer;
 
+    [Header("References")]
     [SerializeField] Transform target;
 
     private Rigidbody2D targetRb2D;
@@ -26,28 +30,58 @@ public class TrajectoryPrediction : MonoBehaviour
     {
         transform.position = target.position;
 
-        DisplayTrajectory();
+        if(isPredicting)
+        {
+            DisplayTrajectory();
+        }
+
+      
+    }
+
+    public void TogglePrediction(TouchUserInput tui)
+    {
+        if(tui.InputState == TouchUserInput.State.None)
+        {
+            isPredicting = false;
+            return;
+        }
+        isPredicting = true;
     }
 
     private void DisplayTrajectory()
     {
-        int maxIterations = Mathf.RoundToInt(predictionTime / Time.fixedDeltaTime);
-        Vector2 pos = Vector2.zero;
-        Vector2 vel = target.GetComponent<Rigidbody2D>().velocity + hitValue.Value / targetRb2D.mass;
-        float drag = targetRb2D.drag;
-        for(int i = 0; i < maxIterations; i++)
+        if(hitValue.Value == Vector2.zero)
         {
-            vel += Physics2D.gravity * Time.fixedDeltaTime;
-            vel *= Mathf.Clamp01(1.0f - (drag * Time.fixedDeltaTime));
-            pos += vel * Time.fixedDeltaTime;
+            lineRenderer.enabled = false;
+        }
+        else
+        {
+            int maxIterations = Mathf.RoundToInt(predictionTime / Time.fixedDeltaTime);
+            Vector2 pos = Vector2.zero;
+            Vector2 vel = targetRb2D.velocity + hitValue.Value / targetRb2D.mass;
+            float drag = targetRb2D.drag;
 
             trajectoryPoints.Add(pos);
+
+            for (int i = 0; i < maxIterations; i++)
+            {
+                vel += Physics2D.gravity * Time.fixedDeltaTime;
+                vel *= Mathf.Clamp01(1.0f - (drag * Time.fixedDeltaTime));
+                pos += vel * Time.fixedDeltaTime;
+
+                trajectoryPoints.Add(pos);
+            }
+
+            lineRenderer.positionCount = trajectoryPoints.Count;
+            lineRenderer.SetPositions(trajectoryPoints.ToArray());
+
+            trajectoryPoints.Clear();
+
+            lineRenderer.enabled = true;
+
         }
 
-        lineRenderer.positionCount = trajectoryPoints.Count;
-        lineRenderer.SetPositions(trajectoryPoints.ToArray());
-
-        trajectoryPoints.Clear();
+        
 
     }
 }
